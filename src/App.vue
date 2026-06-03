@@ -101,8 +101,9 @@ const posts = [
     <p>© 2026 林小北的博客 · 由 Vue 3 + Vite 驱动</p>
   </footer>
   </div>
+</template>
 
-  <style>
+<style>
 .login-wrapper {
   position: relative;
 }
@@ -388,5 +389,5 @@ const posts = [
     gap: 16px;
     text-align: center;
   }
-
+}
 </style>
