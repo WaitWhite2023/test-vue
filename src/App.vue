@@ -1,4 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import LoginPage from './components/LoginPage.vue'
+
+const showLogin = ref(false)
+
 const posts = [
   {
     title: 'Vue 3 组合式 API 入门笔记',
@@ -28,7 +33,13 @@ const posts = [
 </script>
 
 <template>
-  <header class="site-header">
+  <div v-if="showLogin" class="login-wrapper">
+    <button class="back-btn" @click="showLogin = false">← 返回博客</button>
+    <LoginPage />
+  </div>
+
+  <div v-else>
+    <header class="site-header">
     <div class="site-brand">
       <span class="brand-avatar">林</span>
       <span>林小北的博客</span>
@@ -37,6 +48,7 @@ const posts = [
       <a href="#" class="active">首页</a>
       <a href="#">归档</a>
       <a href="#">关于</a>
+      <a href="#" @click.prevent="showLogin = true">登录</a>
     </nav>
   </header>
 
@@ -88,7 +100,34 @@ const posts = [
   <footer class="site-footer">
     <p>© 2026 林小北的博客 · 由 Vue 3 + Vite 驱动</p>
   </footer>
-</template>
+  </div>
+
+  <style>
+.login-wrapper {
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+}
+  </style>
 
 <style scoped>
 .site-header {
@@ -349,5 +388,5 @@ const posts = [
     gap: 16px;
     text-align: center;
   }
-}
+
 </style>
