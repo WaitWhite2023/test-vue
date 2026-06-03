@@ -3,6 +3,7 @@
   --text-h: #111827;
   --text-light: #6b7280;
   --bg: #fff;
+  --bg-elevated: #f9fafb;
   --border: #e5e7eb;
   --accent: #4f46e5;
   --accent-bg: rgba(79, 70, 229, 0.06);
@@ -26,6 +27,7 @@
     --text-h: #f9fafb;
     --text-light: #9ca3af;
     --bg: #111827;
+    --bg-elevated: #1f2937;
     --border: #374151;
     --accent: #818cf8;
     --accent-bg: rgba(129, 140, 248, 0.08);
@@ -34,6 +36,7 @@
 
 body {
   margin: 0;
+  background: var(--bg);
 }
 
 h1, h2, h3 {
@@ -53,7 +56,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 #app {
