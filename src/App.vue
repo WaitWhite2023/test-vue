@@ -6,7 +6,7 @@ const showLogin = ref(false)
 
 const posts = [
   {
-    title: 'Vue 3 组合式 API 入门笔记',
+    title: 'Vue 3 组合式 API 入门笔记1111',
     date: '2026-05-20',
     summary: '记录学习 Vue 3 Composition API 的过程，包括 setup 语法糖、响应式基础和常用组合式函数。',
     tag: 'Vue'
